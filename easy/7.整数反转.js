@@ -14,7 +14,7 @@ const reverse = function (x) {
     x = (x / 10) | 0;
   }
 
-  // 对超过 32 位的整数 安位或 转换结果不等于自身，可用作溢出判断
+  // 对超过 32 位的整数 按位或 转换结果不等于自身，可用作溢出判断
   return (result | 0) === result ? result : 0;
 };
 
