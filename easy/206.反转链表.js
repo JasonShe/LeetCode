@@ -10,6 +10,7 @@ const reverseList = function (head) {
   let prev = null;
   let curr = head;
   while (curr) {
+    // 先存下一个节点
     const next = curr.next;
     curr.next = prev;
     prev = curr;

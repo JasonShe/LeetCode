@@ -10,14 +10,17 @@
  */
 const search = function(nums, target) {
   let left = 0;
-  let right = nums.length - 1;
+  let right = nums.length;
   let pivot;
 
-  while(left <= right) {
-    pivot = left + (right - left);
-    if (nums[pivot] === target) {
+  while (left <= right) {
+    // 计算中间值
+    pivot = Math.floor((left + right) / 2);
+
+    if (target === nums[pivot]) {
       return pivot;
     }
+
     if (target < nums[pivot]) {
       right = pivot - 1;
     } else {
